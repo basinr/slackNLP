@@ -24,11 +24,12 @@ if sc.rtm_connect():
         "channels.list"
     )
 
+
     # channel_convs = sc.api_call(
     #     "channels.history", channel="C08516EL8")
+    
 
-
-    helper_functions.driver(im_lists, channel_lists, user, sc)
+    helper_functions.driver(im_lists['ims'], channel_lists['channels'], user, sc)
 
     # users = user_list = sc.api_call(
     #     "users.list")
@@ -37,7 +38,6 @@ if sc.rtm_connect():
     #     if users["members"][x]["real_name"] == 'Gary Basin':
     #         print 'Gary Basin'
     #     x += 1
-
 
 else:
     print "Connection Failed, invalid token?"
